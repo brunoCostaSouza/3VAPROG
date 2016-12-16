@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org" lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+</head>
+<body> 
+<wicket:extend>
+	<div id="main" class="container-fluid">
+	     <div id="top" class="row">
+			<div class="col-md-3">
+		        <h2>Gastos </h2>
+	    	</div>
+ 
+		    <div class="col-md-6">
+		    	<form wicket:id="formFiltro">
+			        <div class="input-group h2">
+			            <input wicket:id="textFiltrar"  name="data[search]" class="form-control" id="search" type="text" placeholder="Informe o local para pesquisar">
+			            <span class="input-group-btn">
+			                <button id="botaoFiltrar" wicket:id="botaoFiltrar"  class="btn btn-primary" type="submit">
+			                    <span class="glyphicon glyphicon-search"></span>
+			                </button>
+			            </span>
+			        </div>
+		        </form>
+		    </div>
+ 
+		    <div class="col-md-3">
+		        <a wicket:id="criarGasto" class="btn btn-primary pull-right h2"><i class="glyphicon glyphicon-plus"></i> Novo gasto</a>
+		    </div>
+		    
+	     </div> <!-- /#top -->
+	 
+	     <hr/>
+	     <div wicket:id="divListaGasto">
+		     <div id="list" class="row">
+			    <div class="table-responsive col-md-12">
+			        <table class="table table-hover " >
+			            <thead>
+			                <tr>
+			                    <th style="width: 10%%">ID</th>
+			                    <th style="width: 25%">Destino</th>
+			                    <th style="width: 20%">Local</th>
+			                    <th style="width: 20%">Valor Gasto</th>
+			                    <th style="width: 20%">Data Gasto</th>
+			                    <th style="width: 7%" class="actions">Ações</th>
+			                 </tr>
+			            </thead>
+			            <tbody wicket:id="listaGasto">
+			 
+			                <tr >
+			                    <td wicket:id="id">1</td>
+			                    <td wicket:id="destinoViagem">Anápolis</td>
+			                    <td wicket:id="local">Goiânia</td>
+			                    <td wicket:id="valorGasto">01/01/2015</td>
+			                    <td wicket:id="dataGasto">01/02/2015</td>
+			                    <td class="actions">
+			                        <a wicket:id="editar" class="btn btn-warning btn-xs" ><i class="glyphicon glyphicon-pencil"></i></a>
+			                        <a wicket:id="excluir"  class="btn btn-danger btn-xs" ><i class="glyphicon glyphicon-trash"></i></a>
+			                        
+			                        <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+									    <div class="modal-dialog" role="document">
+									        <div class="modal-content">
+									            <div class="modal-header">
+									                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+									                <h4 class="modal-title" id="modalLabel">Deseja realmente excluir este item? </h4>
+									            </div>
+									            <div class="modal-body">
+									            
+									            </div>
+									            
+									            <div class="modal-footer">
+									                <button  type="button" class="btn btn-primary">Sim</button>
+									                <button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
+									            </div>
+									        </div>
+									    </div>
+									</div>
+			                    </td>
+			                </tr>
+			            </tbody>
+			         </table>
+		     	</div>
+	     	</div> <!-- /#list -->
+		</div>
+     	<div id="bottom" class="row"></div> <!-- /#bottom -->
+     
+ 	</div>  <!-- /#main -->
+	
+	
+</wicket:extend>
+</body>
+</html>

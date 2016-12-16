@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org" lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<wicket:extend>
+
+	<div class="row">
+		<input type="hidden" wicket:id="id"/>
+		<div class="form-group col-md-4">
+		   <label >Destino</label>
+		   <input wicket:id="destino" required  type="text" class="form-control" >
+		 </div>
+		 <div class="form-group col-md-4">
+		   <label >Orçamento</label>
+			   <input wicket:id="orcamento" onkeypress="moeda(this);" type="text" class="form-control" >
+		 </div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-4">
+			<label>Data Partida</label>
+			<input wicket:id="dataPartida" type="text" id="exemplo" class="form-control">
+		 </div>
+		 
+		 <div class="form-group col-md-4">
+		   <label >Data chegada</label>
+		   <input wicket:id="dataChegada" type="text" id="exemplo" class="form-control">
+		 </div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-4">
+			<!--  <div >
+				<select wicket:id="tipoViagem" class="form-control">
+					<option value="negocios">Negócios</option>
+					<option value="lazer">Lazer</option>
+				</select>
+			</div>-->
+			<div class="fieldcontain col-lg-6">
+				<label>Tipo da Viagem</label>
+				<div wicket:id="tipoViagem">
+					<div class="radio">
+						<label><input wicket:id="tipoLazer" type="radio" name="optradio"/> Lazer</label>
+					</div>
+					<div class="radio">
+						<label><input wicket:id="tipoNegocios" type="radio" name="optradio"/> Negócios</label>
+					</div>
+				</div>
+			</div>
+			<div class="fieldcontain col-lg-6">
+				<label>Recursos</label>
+				<div class="checkbox">
+					<div>
+						<label><input wicket:id="celular" type="checkbox" /> Celular</label>
+					</div>
+					<div>
+						<label><input wicket:id="notebook" type="checkbox"/> Notebook</label>
+					</div>
+					<div>
+						<label><input wicket:id="tablet" type="checkbox"/> Tablet</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-md-4">
+			<label>Descrição</label>
+			<textarea wicket:id="descricao" class="form-control"></textarea>
+		</div>
+	</div>
+	
+</wicket:extend>
+</body>
+</html>

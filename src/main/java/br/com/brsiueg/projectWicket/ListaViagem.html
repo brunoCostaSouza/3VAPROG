@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org" lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+ <title></title>
+</head>
+<body> 
+<wicket:extend>
+	<div id="main" class="container-fluid">
+	     <div id="top" class="row">
+			<div class="col-md-3">
+		        <h2>Viagens</h2>
+	    	</div>
+ 
+		    <div class="col-md-6">
+	        	<form wicket:id="formFiltro">
+		            <div class="input-group h2">
+			            <input wicket:id="filtrarDestino" class="form-control" type="text" placeholder="Pesquisar Viagem">
+			            <span class="input-group-btn">
+			                <button id="botaoFiltrar" wicket:id="botaoFiltrarDestino" class="btn btn-primary" type="submit">
+			                    <span class="glyphicon glyphicon-search"></span>
+			                </button>
+			            </span>
+		            </div>
+	            </form>
+		    </div>
+ 
+		    <div class="col-md-3">
+		        <a wicket:id="criarViagem" class="btn btn-primary pull-right h2"><i class="glyphicon glyphicon-plus"></i> Nova Viagem</a>
+		    </div>
+		    
+	     </div> <!-- /#top -->
+	 
+	     <hr/>
+	     <div class="row">
+			<div class="form-group col-md-8">
+				<div wicket:id="feedback"  role="alert"></div>
+			</div>
+		</div>
+		<div wicket:id="divListaViagem">
+		     <div id="list" class="row">
+	 
+			    <div class="table-responsive col-md-12">
+			        <table class="table table-hover " >
+			            <thead>
+			                <tr>
+			                    <th style="width: 5%">ID</th>
+			                    <th style="width: 40%">Destino</th>
+			                    <th style="width: 15%">Data partida</th>
+			                    <th style="width: 15%">Data chegada</th>
+			                    <th style="width: 10%">Orçamento</th>
+			                    <th style="width: 8%" class="actions">Ações</th>
+			                 </tr>
+			            </thead>
+			            <tbody wicket:id="listaViagem">
+			 
+			                <tr>
+			                    <td wicket:id="idViagem">1</td>
+			                    <td wicket:id="destinoViagem">Anápolis</td>
+			                    <td wicket:id="dataPartidaViagem">01/01/2015</td>
+			                    <td wicket:id="dataChegadaViagem">01/02/2015</td>
+			                    <td wicket:id="orcamentoViagem">2.000,00</td>
+			                    <td class="actions">
+			                        <a wicket:id="visualizarViagem" class="btn btn-success btn-xs" ><i class="glyphicon glyphicon-search"></i></a>
+			                        <a wicket:id="editarViagem" class="btn btn-warning btn-xs" ><i class="glyphicon glyphicon-pencil"></i></a>
+			                        <a wicket:id="excluirViagem" class="btn btn-danger btn-xs" ><i class="glyphicon glyphicon-trash"></i></a><!-- data-toggle="modal" data-target="#delete-modal" -->
+			                        
+			                        <div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+									    <div class="modal-dialog" role="document">
+									        <div class="modal-content">
+									            <div class="modal-header">
+									                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
+									                <h4 class="modal-title" id="modalLabel">Excluir Item</h4>
+									            </div>
+									            <div class="modal-body">Deseja realmente excluir este item? </div>
+									            <div class="modal-footer">
+									                <a  type="button" class="btn btn-primary">Sim</a>
+									                <button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
+									            </div>
+									        </div>
+									    </div>
+									</div>
+									
+			                    </td>
+			                </tr>
+			            </tbody>
+			         </table>
+			     </div>
+		     
+		     </div> <!-- /#list -->
+		 </div>
+	     <div id="bottom" class="row">
+	     
+	     </div> <!-- /#bottom -->
+	     
+ 	</div>  <!-- /#main -->
+</wicket:extend>
+</body>
+</html>

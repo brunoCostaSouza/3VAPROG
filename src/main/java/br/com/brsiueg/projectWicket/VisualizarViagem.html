@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org" lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<wicket:extend>
+	<div id="main" class="container-fluid">
+		<div class="row">
+			<div class="fieldcontain col-lg-10 col-md-offset-1">
+				<div class="panel panel-primary">
+			      <div class="panel-heading"><h4>Detalhes da viagem</h4></div>
+			    	<div class="panel-body">
+						<h4>Informações da viagem</h4>
+						<div>
+							<div class="panelb panel-default">
+						    	<div class="panel-body">
+						    		<table class="table table-bordered">
+						    			<thead>
+						    				<tr>
+						    					<th>Destino</th>
+						    					<th>Orçamento</th>
+						    					<th>Data Partida</th>
+						    					<th>Data Chegada</th>
+						    					<th>Tipo Viagem</th>
+						    					<th>Descrição</th>
+						    				</tr>
+						    			</thead>
+						    			<tbody>
+						    				<tr>
+						    					<td wicket:id="destino"></td>
+						    					<td wicket:id="orcamento"></td>
+						    					<td wicket:id="dataPartida"></td>
+						    					<td wicket:id="dataChegada"></td>
+						    					<td wicket:id="tipoViagem"></td>
+						    					<td wicket:id="descricao"></td>
+						    				</tr>
+						    			</tbody>
+						    		</table>
+						    	</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="fieldcontain col-lg-11">
+								<h4>Relação de Gastos</h4>
+							</div>
+							<div class="fieldcontain col-lg-1">
+								<a wicket:id="linkGastar" class="btn btn-success"><i class="glyphicon glyphicon-usd"></i> Gastar</a>
+							</div>
+						</div>
+						<table class="table table-bordered">
+						    <thead>
+						    	<tr>
+						    		<th>Local</th>
+						     		<th>Data Gasto</th>
+						     		<th>Valor Gasto</th>
+						    	</tr>
+						    </thead>
+						    <tbody wicket:id="listaGasto">
+						    	<tr>
+						    		<td wicket:id="local"></td>
+							        <td wicket:id="dataGasto"></td>
+							        <td wicket:id="valorGasto"></td>
+						    	</tr>
+						    </tbody>
+						</table>
+					</div>
+			    </div>
+		    </div>
+		</div>
+		<!-- <div class="row">
+			<div class="fieldcontain col-lg-11 col-md-offset-10">
+			    <a wicket:id="voltar" class="btn btn-info"><i class="glyphicon glyphicon-hand-left"></i> Voltar</a>
+			</div>
+		</div> -->
+	</div>
+</wicket:extend>
+</body>
+</html>

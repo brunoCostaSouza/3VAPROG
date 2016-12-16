@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org" lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<wicket:extend>
+	<div class="row">
+		<div class="form-group col-md-4">
+		   <label >Viagem</label>
+		   <select wicket:id="idViagem"  class="form-control" ></select>
+		 </div>
+		 <div class="form-group col-md-4">
+		   <label>Valor gasto</label>
+			   <input wicket:id="valorGasto" onkeypress="moeda(this);" type="text" class="form-control" >
+		 </div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-4">
+			<label>Data Gasto</label>
+			<input wicket:id="dataGasto" type="text" id="exemplo" class="form-control">
+		 </div>
+		 
+		 <div class="form-group col-md-4">
+		   <label >Local</label>
+		   <input wicket:id="local" type="text" id="exemplo" class="form-control">
+		 </div>
+	</div>
+</wicket:extend>
+</body>
+</html>
